@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MyFramework"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "A short description of MyFramework."
 
   # This description is used to generate tags and improve search results.
@@ -25,21 +25,26 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+                      A short description of MyFramework.
                    DESC
 
   spec.homepage     = "https://github.com/QYChu/MyFramework"
 
-  spec.license      = "MIT (example)"
+  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
 
   spec.author             = { "QYChu" => "18649756870@163.com" }
 
   spec.source       = { :git => "https://github.com/QYChu/MyFramework.git", :tag => "#{spec.version}" }
 
   spec.platform     = :ios, "9.0"
+
+  spec.static_framework = true
+  
   spec.source_files  = 'MyFramework.framework/Headers/*.h'
   spec.public_header_files = "MyFramework.framework/Headers/*.h"
   spec.vendored_frameworks = "MyFramework.framework"
 
   spec.dependency 'Cartography', '~> 3.0'
+  spec.dependency 'SVProgressHUD', '~> 2.2.5'
 
 end
