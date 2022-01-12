@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MyFramework"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "A short description of MyFramework."
 
   # This description is used to generate tags and improve search results.
@@ -36,15 +36,17 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/QYChu/MyFramework.git", :tag => "#{spec.version}" }
 
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "11.0"
+
+  spec.swift_version = '5.0'
 
   spec.static_framework = true
-  
+
   spec.source_files  = 'MyFramework.framework/Headers/*.h'
   spec.public_header_files = "MyFramework.framework/Headers/*.h"
   spec.vendored_frameworks = "MyFramework.framework"
 
-  spec.dependency 'Cartography', '~> 3.0'
+  spec.dependency 'Cartography', '~> 4.0'
   spec.dependency 'SVProgressHUD', '~> 2.2.5'
 
 end
